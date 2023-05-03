@@ -12,14 +12,16 @@ function PrimaryLayout(props: Props) {
   const { pageTitle, children } = props;
 
   return (
-    <div>
+    <>
       <Head>
         <title>{pageTitle}</title>
       </Head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+      <div className='grid min-h-screen grid-rows-primary-layout'>
+        <Header />
+        <main className='container mx-auto my-4 px-6'>{children}</main>
+        <Footer />
+      </div>
+    </>
   );
 }
 
