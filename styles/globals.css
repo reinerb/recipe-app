@@ -10,4 +10,8 @@
   svg {
     @apply fill-stone-950 dark:fill-stone-50;
   }
+
+  header a {
+    @apply hover:text-stone-700 dark:hover:text-stone-200;
+  }
 }
