@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-amber-50 text-stone-950 dark:bg-amber-900 dark:text-stone-50;
+  }
+
+  svg {
+    @apply fill-stone-950 dark:fill-stone-50;
+  }
+}
