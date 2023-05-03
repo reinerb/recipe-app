@@ -11,18 +11,10 @@ function RecipeDisplay(props: Props) {
 
   return (
     <article>
-      <section
-        id='top-matter'
-        className='flex flex-col md:flex-row md:items-end md:justify-between'
-      >
+      <section id='top-matter'>
         <h1 className='text-3xl font-bold'>{title}</h1>
-        <p>Servings: {servings}</p>
-      </section>
-      <section
-        id='description'
-        className='mt-4'
-      >
-        {description}
+        <p className='mt-1'>Servings: {servings}</p>
+        <p className='mt-1'>{description}</p>
       </section>
       <section
         id='ingredients'
