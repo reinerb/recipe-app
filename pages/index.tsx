@@ -20,7 +20,10 @@ const sampleRecipe = {
 export default function Home() {
   return (
     <PrimaryLayout pageTitle='Recipe App'>
-      <RecipeDisplay recipe={sampleRecipe} />
+      <RecipeDisplay
+        key={sampleRecipe.id}
+        recipe={sampleRecipe}
+      />
     </PrimaryLayout>
   );
 }
