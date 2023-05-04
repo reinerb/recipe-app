@@ -6,4 +6,5 @@ export type Recipe = {
   ingredients: string[];
   steps: string[];
   notes: string[];
+  imageUrl?: string;
 };
