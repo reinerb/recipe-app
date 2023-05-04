@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Recipe } from '@/types/Recipe';
+import Image from 'next/image';
 
 interface Props {
   recipe: Recipe;
@@ -8,6 +9,7 @@ interface Props {
 function RecipeDisplay(props: Props) {
   const { title, servings, description, ingredients, steps, notes } =
     props.recipe;
+  const imageUrl = props.recipe.imageUrl || null;
 
   return (
     <article className='grid gap-4 lg:grid-cols-3'>
@@ -49,6 +51,14 @@ function RecipeDisplay(props: Props) {
           ))}
         </ul>
       </section>
+      {imageUrl && (
+        <Image
+          src={imageUrl}
+          alt=''
+          width={400}
+          height={400}
+        />
+      )}
     </article>
   );
 }
