@@ -10,16 +10,16 @@ function RecipeDisplay(props: Props) {
     props.recipe;
 
   return (
-    <article>
-      <section id='top-matter'>
+    <article className='grid gap-4 lg:grid-cols-3'>
+      <section
+        id='top-matter'
+        className='lg:col-span-3'
+      >
         <h1 className='text-3xl font-bold'>{title}</h1>
         <p className='mt-1'>Servings: {servings}</p>
         <p className='mt-1'>{description}</p>
       </section>
-      <section
-        id='ingredients'
-        className='mt-4'
-      >
+      <section id='ingredients'>
         <h2 className='text-xl font-semibold'>Ingredients</h2>
         <ul className='ml-6 mt-1 list-disc'>
           {ingredients.map((ingredient, index) => (
@@ -29,7 +29,7 @@ function RecipeDisplay(props: Props) {
       </section>
       <section
         id='steps'
-        className='mt-4'
+        className='lg:col-span-2'
       >
         <h2 className='text-xl font-semibold'>Recipe Steps</h2>
         <ol className='ml-6 mt-1 list-decimal'>
@@ -40,7 +40,7 @@ function RecipeDisplay(props: Props) {
       </section>
       <section
         id='notes'
-        className='mt-4'
+        className='lg:col-span-3'
       >
         <h2 className='text-xl font-semibold'>Notes</h2>
         <ul className='ml-6 mt-1 list-disc'>
